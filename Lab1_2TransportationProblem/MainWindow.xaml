@@ -1,0 +1,33 @@
+﻿<Window x:Class="Lab1_2TransportationProblem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:TPTable="clr-namespace:Lab1_2TransportationProblem"
+        Title="Transport Problem" Height="562" Width="549"
+        Icon="Resources/transport_problem.ico">
+    <Grid Margin="0,0,0.4,7.6" Height="Auto" VerticalAlignment="Stretch">
+        <GroupBox Header="Transport table" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="300" Width="518">
+            <TPTable:TPTable Margin="5,5,0,0" Height="240" Width="480" HorizontalAlignment="Stretch">
+            </TPTable:TPTable>
+        </GroupBox>
+        <GroupBox Header="Input" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Height="165" Width="210">
+            <RichTextBox HorizontalAlignment="Left" Height="133" VerticalAlignment="Top" Width="188" Margin="3,6,0,0">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Name="InputText" Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </GroupBox>
+        <GroupBox Header="Simplex Solution" HorizontalAlignment="Left" Margin="289,315,0,0" VerticalAlignment="Top" Height="165" Width="239"/>
+        <RichTextBox HorizontalAlignment="Left" Height="132" Margin="303,338,0,0" VerticalAlignment="Top" Width="213">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Name="SimplexSolutionText" Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="19,499,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Prepare" HorizontalAlignment="Left" Margin="303,499,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Solve" HorizontalAlignment="Left" Margin="441,499,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3" RenderTransformOrigin="0.555,-1.01"/>
+    </Grid>
+</Window>
